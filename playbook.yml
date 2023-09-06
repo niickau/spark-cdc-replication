@@ -1,0 +1,9 @@
+---
+- hosts: servers
+  become: true
+  gather_facts: no
+  tasks:
+    - name: copy file
+      copy:
+        src: '{{ PROJECT_DIR }}'
+        dest: '{{ MAN_PROJECT_PATH }}'
